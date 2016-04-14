@@ -1,0 +1,28 @@
+<template name="ApplicationLayout">
+	<div id="wrapper" class="container">
+		<div class="row">
+			{{> yield "header" }}
+		</div>
+		<div class="row">
+	    	{{> yield }}
+		</div>
+		<div class="row">
+			{{> yield "footer" }}
+		</div>
+	</div>
+</template>
+
+<template name="ApplicationHeader">
+	<div id="header" class="col-xs-12">
+  		<div class="header-logo">
+			<a href="{{pathFor route='home'}}"><img src="/images/meteor-logo.png"/></a>
+        </div>
+		<div style="clear: both;"></div>
+	</div>
+</template>
+
+<template name="ApplicationFooter">
+	<div id="footer" class="col-xs-12">
+		
+	</div>
+</template>

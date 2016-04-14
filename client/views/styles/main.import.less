@@ -1,0 +1,112 @@
+//** Styles
+html,
+body {
+  height: 100%;
+}
+
+html {
+  margin: 0 6%;
+  padding: 0;
+}
+
+body {
+  font-weight: 300;
+  margin: 0;
+  padding: 3% 0;
+}
+
+#wrapper {
+  min-width: 1170px;
+}
+
+a.btn,
+a.btn-default,
+button,
+button:hover,
+button:active {
+  appearance: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+  font-size: 0.9em !important;
+  margin: 0 !important;
+  padding: 2px 8px !important;
+}
+
+a.btn,
+a.btn:active,
+a.btn:hover {
+  text-decoration: none;
+}
+
+input {
+  border: 1px solid #6B6A6A;
+  padding: 2px;
+}
+
+//** Splash Screen
+img.splash-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: @splash-logo-height;
+  width: @splash-logo-width;
+  margin-left: @splash-logo-margin-left;
+  margin-top: @splash-logo-margin-top;
+}
+
+//** Header
+#header {
+  border-bottom: @section-border-thickness @section-border-type @section-border-color;
+  font-size: 0.9em;
+}
+
+#header .header-logo img {
+  height: @header-logo-height;
+  zoom: 70%;
+}
+
+nav.navbar {
+  float: right;
+  min-height: 0;
+  margin-top: -10px;
+}
+
+#header .login-section {
+  display: table;
+}
+
+.login-item input {
+  margin-top: -2px;
+}
+
+#header .login-section .login-item {
+  display: table-cell;
+  padding-right: 0.5em;
+  vertical-align: middle;
+}
+
+//** Content
+#content {
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  border-left: @section-border-thickness @section-border-type @section-border-color;
+  padding-left: 0;
+}
+
+.bolded {
+  font-weight: bold;
+}
+
+.red-text {
+  color: red;
+}
+
+//** Footer
+#footer {
+  border-top: @section-border-thickness @section-border-type @section-border-color;
+  padding-bottom: 2em;
+}
