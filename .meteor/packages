@@ -21,7 +21,6 @@ iron:router
 less
 accounts-password
 ian:accounts-ui-bootstrap-3
-aldeed:tabular
 standard-minifier-css
 standard-minifier-js
 huttonr:bootstrap3
