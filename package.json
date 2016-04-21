@@ -1,13 +1,37 @@
 {
   "name": "meteor_boilerplate",
-  "private": true,
+  "version": "0.0.1",
+  "description": "A simple MeteorJS project boilerplate.",
+  "main": "main.js",
   "scripts": {
     "start": "meteor run",
     "lint": "eslint .",
     "pretest": "npm run lint --silent"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://andyp22:d0n3rk3bab@github.com/andyp22/meteor_boilerplate.git"
+  },
+  "keywords": [
+    "meteor",
+    "boilerplate"
+  ],
+  "author": "Andrew Page",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andyp22/meteor_boilerplate/issues"
+  },
+  "homepage": "https://github.com/andyp22/meteor_boilerplate",
   "dependencies": {
     "meteor-node-stubs": "~0.2.0"
+  },
+  "devDependencies": {
+    "eslint": "2.8.0",
+    "eslint-config-airbnb": "7.0.0",
+    "eslint-plugin-meteor": "3.5.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=0.8.0"
   },
   "eslintConfig": {
     "plugins": [
