@@ -2,9 +2,21 @@
   "name": "meteor_boilerplate",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "lint": "eslint .",
+    "pretest": "npm run lint --silent"
   },
   "dependencies": {
     "meteor-node-stubs": "~0.2.0"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "meteor"
+    ],
+    "extends": [
+      "airbnb/base",
+      "plugin:meteor/recommended"
+    ],
+    "rules": {}
   }
 }
