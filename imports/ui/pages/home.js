@@ -8,15 +8,19 @@ Template.hello.onCreated(function helloOnCreated() {
   this.counter = new ReactiveVar(0);
 });
 
+function CounterHelper() {
+  return Template.instance().counter.get();
+}
+
+function OnButtonClick(event, instance) {
+  // increment the counter when button is clicked
+  instance.counter.set(instance.counter.get() + 1);
+}
+
 Template.hello.helpers({
-  counter: function() {
-    return Template.instance().counter.get();
-  }
+  counter: CounterHelper,
 });
 
 Template.hello.events({
-  'click button' : function(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
+  'click button': OnButtonClick,
 });

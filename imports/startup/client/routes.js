@@ -8,14 +8,14 @@ import '../../ui/pages/home.js';
  * Router settings for the iron:router package.
  */
 Router.configure({
-	layoutTemplate: 'ApplicationLayout'
+  layoutTemplate: 'ApplicationLayout',
 });
 
 Router.route('home', {
-	name: 'home',
-	path: '/',
-	yieldRegions: {
-		'ApplicationHeader': {to: 'header'},
-		'ApplicationFooter': {to: 'footer'}
-	}
+  name: 'home',
+  path: '/',
+  yieldRegions: {
+    ApplicationHeader: { to: 'header' },
+    ApplicationFooter: { to: 'footer' },
+  },
 });
