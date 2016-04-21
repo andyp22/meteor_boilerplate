@@ -4,7 +4,7 @@ import { Template } from 'meteor/templating';
 /*
  * Handlebars Helpers
  */
-function GetSiteTitle() {
+function siteTitleHelper() {
   let title = 'Site Title';
   if (Meteor.settings) {
     if (Meteor.settings.public) {
@@ -16,9 +16,9 @@ function GetSiteTitle() {
   return title;
 }
 
-function GetJSON(context) {
+function JSONHelper(context) {
   return JSON.stringify(context);
 }
 
-Template.registerHelper('site_title', GetSiteTitle);
-Template.registerHelper('json', GetJSON);
+Template.registerHelper('site_title', siteTitleHelper);
+Template.registerHelper('json', JSONHelper);
