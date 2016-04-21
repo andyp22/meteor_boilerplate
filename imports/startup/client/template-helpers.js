@@ -1,7 +1,8 @@
+import { Template } from 'meteor/templating';
 /*
  * Handlebars Helpers
  */
-Handlebars.registerHelper('site_title', function(context) {
+Template.registerHelper('site_title', function(context) {
 	var title = "Site Title";
 	if(Meteor.settings)  {
 		if(Meteor.settings.public)  {
@@ -13,6 +14,6 @@ Handlebars.registerHelper('site_title', function(context) {
 	return title;
 });
 
-Handlebars.registerHelper('json', function(context) {
+Template.registerHelper('json', function(context) {
 	return JSON.stringify(context);
 });
