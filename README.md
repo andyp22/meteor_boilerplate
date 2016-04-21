@@ -1,7 +1,8 @@
 # Meteor Boilerplate
-A simple MeteorJS project boilerplate.
+A simple MeteorJS project boilerplate. File structure has been updated based on guidelines 
+here: http://guide.meteor.com/structure.html
 
-@1.3.1
+@1.3.2.4
 
 Using the following packages:
  - meteor-base          	   # Packages every Meteor app needs to have

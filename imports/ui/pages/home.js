@@ -1,16 +1,7 @@
 import { Template } from 'meteor/templating';
 import { ReactiveVar } from 'meteor/reactive-var';
 
-import './index.html';
-
-Router.route('home', {
-	name: 'home',
-	path: '/',
-	yieldRegions: {
-		'ApplicationHeader': {to: 'header'},
-		'ApplicationFooter': {to: 'footer'}
-	},
-});
+import './home.html';
 
 Template.hello.onCreated(function helloOnCreated() {
   // counter starts at 0
