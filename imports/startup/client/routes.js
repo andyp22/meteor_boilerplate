@@ -8,10 +8,7 @@ import '../../ui/pages/home.js';
  * Router settings for the iron:router package.
  */
 Router.configure({
-	layoutTemplate: 'ApplicationLayout',
-	data: {
-		title: "HealthCheck"
-	}
+	layoutTemplate: 'ApplicationLayout'
 });
 
 Router.route('home', {
@@ -20,5 +17,5 @@ Router.route('home', {
 	yieldRegions: {
 		'ApplicationHeader': {to: 'header'},
 		'ApplicationFooter': {to: 'footer'}
-	},
+	}
 });
