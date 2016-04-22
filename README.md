@@ -1,7 +1,8 @@
 # Meteor Boilerplate
-A simple MeteorJS project boilerplate.
-
-@1.3.1
+A simple MeteorJS project boilerplate. @1.3.2.4
+ - File structure has been updated based on guidelines here: http://guide.meteor.com/structure.html
+ - Code formatting based on: http://guide.meteor.com/code-style.html
+   - Uses the Airbnb JavaScript style guide: https://github.com/airbnb/javascript
 
 Using the following packages:
  - meteor-base          	   # Packages every Meteor app needs to have
