@@ -1,6 +1,7 @@
+import { Meteor } from 'meteor/meteor';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-export function getPublicEmailSetting(publicSettingKey, defaultValue)  {
+export function getPublicEmailSetting(publicSettingKey, defaultValue) {
   let returnVal = defaultValue || '';
   if (Meteor.settings) {
     if (Meteor.settings.public) {
@@ -14,7 +15,7 @@ export function getPublicEmailSetting(publicSettingKey, defaultValue)  {
   return returnVal;
 }
 
-export function getPrivateEmailSetting(privateSettingKey, defaultValue)  {
+export function getPrivateEmailSetting(privateSettingKey, defaultValue) {
   let returnVal = defaultValue || '';
   if (Meteor.settings && Meteor.isServer) {
     if (Meteor.settings.private) {

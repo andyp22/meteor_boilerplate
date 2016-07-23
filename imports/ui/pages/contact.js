@@ -9,7 +9,7 @@ import { Meteor } from 'meteor/meteor';
 import { ReactiveVar } from 'meteor/reactive-var';
 import { AutoForm } from 'meteor/aldeed:autoform';
 
-import { 
+import {
   contactFormSchema,
   getPublicEmailSetting,
 } from '/imports/startup/common/emails.js';
@@ -36,8 +36,8 @@ AutoForm.hooks({
   contactForm: {
     onSubmit(insertDoc) {
       const contactEmail = Object.assign({}, insertDoc);
-      contactEmail.to = getPublicEmailSetting('contact_form_from' , 'john.doe@email.com');
-      Meteor.call('sendTemplateEmail', contactEmail, 'contactEmail', contactEmail);
+      contactEmail.to = getPublicEmailSetting('contact_form_from', 'john.doe@email.com');
+      Meteor.call('sendTemplateEmail', contactEmail, 'contactEmail');
 
       this.done();
       return false;
