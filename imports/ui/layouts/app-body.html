@@ -3,8 +3,8 @@
 		<div class="row">
 			{{> yield "header" }}
 		</div>
-		<div class="row">
-	    	{{> yield }}
+		<div id="content" class="row">
+    	{{> yield }}
 		</div>
 		<div class="row">
 			{{> yield "footer" }}
@@ -14,15 +14,20 @@
 
 <template name="ApplicationHeader">
 	<div id="header" class="col-xs-12">
-  		<div class="header-logo">
+		<div class="header-logo">
 			<a href="{{pathFor route='home'}}"><img src="/images/meteor-logo.png"/></a>
-        </div>
+    </div>
+    <div class="navbar navbar-right">
+      <ul class="nav navbar-nav">
+        <li>{{#linkTo route="contact" class="subnav-btn"}}Contact{{/linkTo}}</li>
+      </ul>
+    </div>
 		<div style="clear: both;"></div>
 	</div>
 </template>
 
 <template name="ApplicationFooter">
 	<div id="footer" class="col-xs-12">
-		
+    
 	</div>
 </template>
