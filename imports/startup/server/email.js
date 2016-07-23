@@ -3,35 +3,25 @@ import { Email } from 'meteor/email';
 import { check } from 'meteor/check';
 import { SSR } from 'meteor/meteorhacks:ssr';
 
-import { emailSchema } from '/imports/startup/common/emails.js';
+import {
+  emailSchema,
+  getPrivateEmailSetting,
+} from '/imports/startup/common/emails.js';
 
-function getEmailSetting(privateSettingKey, defaultValue)  {
-  let returnVal = defaultValue || '';
-  if (Meteor.settings) {
-    if (Meteor.settings.private) {
-      if (Meteor.settings.private.email) {
-        if (Meteor.settings.private.email[privateSettingKey]) {
-          returnVal = Meteor.settings.private.email[privateSettingKey];
-        }
-      }
-    }
-  }
-  return returnVal;
-}
 
 Meteor.startup( function() {
-  const smtp_user = encodeURIComponent(getEmailSetting('smtp_user')),
-      smtp_password = encodeURIComponent(getEmailSetting('smtp_password')),
-      smtp_host = getEmailSetting('smtp_host'),
-      smtp_port = getEmailSetting('smtp_port');
+  const smtp_user = encodeURIComponent(getPrivateEmailSetting('smtp_user')),
+      smtp_password = encodeURIComponent(getPrivateEmailSetting('smtp_password')),
+      smtp_host = getPrivateEmailSetting('smtp_host'),
+      smtp_port = getPrivateEmailSetting('smtp_port');
   
   if (smtp_user !== '' && smtp_password !== '' && smtp_host !== '' && smtp_port !== '') {
     process.env.MAIL_URL = 'smtp://' + smtp_user + ':' + smtp_password + '@' + smtp_host + ':' + smtp_port;
   }
   
   // Email Templates
-  const emailDirectory = getEmailSetting('email_directory', 'email/');
-  SSR.compileTemplate( 'htmlEmail', Assets.getText(emailDirectory + 'html-email.html'));
+  const emailDirectory = getPrivateEmailSetting('email_directory', 'email/');
+  SSR.compileTemplate( 'contactEmail', Assets.getText(emailDirectory + 'contact-email.html'));
 });
 
 function sendEmailMethod(email) {

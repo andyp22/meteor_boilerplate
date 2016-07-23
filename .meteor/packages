@@ -26,3 +26,5 @@ standard-minifier-js
 huttonr:bootstrap3
 meteorhacks:ssr
 aldeed:simple-schema
+aldeed:autoform
+reactive-var

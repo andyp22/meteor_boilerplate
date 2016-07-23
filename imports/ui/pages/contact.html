@@ -1,4 +1,25 @@
 <template name="contactPage">
-  <h2>Contact Page</h2>
-  <p><a href="#" id="sendEmailBtn">Send Template Email</a></p>
+  <div id="contactPage" class="col-xs-6 col-xs-offset-3">
+    {{> Template.dynamic template=contactFormTemplate}}
+  </div>
+</template>
+
+<template name="contactForm">
+  {{#autoForm schema=contactFormSchema id="contactForm" type="normal"}}
+    <fieldset>
+      <legend>Contact Page</legend>
+      {{> afQuickField name="name"}}
+      {{> afQuickField name="from"}}
+      {{> afQuickField name="subject"}}
+      {{> afQuickField name="text" rows=10}}
+      <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-default">Reset</button>
+      </div>
+    </fieldset>
+  {{/autoForm}}
+</template>
+
+<template name="contactFormSent">
+  <div id="contactFormSent">Your email has been sent.<br/><br/>Thank you.</div>
 </template>
