@@ -3,6 +3,11 @@
 		"site_title": "Meteor Boilerplate"
 	},
 	"private": {
-		
+		"email": {
+      "smtp_user": "",
+      "smtp_password": "",
+      "smtp_host": "",
+      "smtp_port": ""
+    }
 	}
 }
