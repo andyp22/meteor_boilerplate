@@ -1,6 +1,9 @@
 {
 	"public": {
-		"site_title": "Meteor Boilerplate"
+		"site_title": "Meteor Boilerplate",
+		"email": {
+		  "contact_form_from": "john.doe@email.com"
+		}
 	},
 	"private": {
 		"email": {
