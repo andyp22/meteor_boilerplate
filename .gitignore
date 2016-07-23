@@ -5,6 +5,9 @@
 .meteor/meteorite
 node_modules/
 
+settings-dev.json
+settings-live.json
+
 # ============ #
 # OS generated #
 # ============ #
