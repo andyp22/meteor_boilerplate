@@ -10,7 +10,8 @@
       "smtp_user": "",
       "smtp_password": "",
       "smtp_host": "",
-      "smtp_port": ""
+      "smtp_port": "",
+      "email_directory": "email"
     }
 	}
 }
