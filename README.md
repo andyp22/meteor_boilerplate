@@ -1,8 +1,9 @@
 # Meteor Boilerplate
-A simple MeteorJS project boilerplate. @1.3.2.4
+A simple MeteorJS project boilerplate. @1.3.5.1
  - File structure has been updated based on guidelines here: http://guide.meteor.com/structure.html
  - Code formatting based on: http://guide.meteor.com/code-style.html
    - Uses the Airbnb JavaScript style guide: https://github.com/airbnb/javascript
+   - Run with meteor npm run lint
 
 Using the following packages:
  - meteor-base          	   # Packages every Meteor app needs to have
@@ -23,3 +24,7 @@ Using the following packages:
  - standard-minifier-css	   # CSS Minifier
  - standard-minifier-js		   # JS Minifier
  - huttonr:bootstrap3		   # Extendable Bootstrap 3 implementation
+ - meteorhacks:ssr  # Server Side Rendering for Meteor
+ - aldeed:simple-schema # A simple, reactive schema validation smart package for Meteor.
+ - aldeed:autoform  # Easily create basic forms with automatic insert and update events, and automatic reactive validation.
+ - reactive-var # A simple reactive variable package.
